@@ -25057,9 +25057,7 @@ span.ivu-date-picker-cells-cell-disabled.ivu-date-picker-cells-cell-selected em 
     outline: none
 }
 
-.ivu-cell-selected:focus {
-    background: rgba(34, 102, 205, .91)
-}
+ 
 
 .ivu-cell {
     margin: 0;

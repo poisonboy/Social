@@ -1,7 +1,7 @@
  <div class="i-layout-content-main-page-menu">
      <div class="ivu-card   ivu-card-dis-hover i-menu-list i-menu-list-card">
-         <!---->
-         <!---->
+     
+     
          <div class="ivu-card-body" style="">
 
              <div class="ivu-cell-group i-menu-list-items ivu-mt">
@@ -18,7 +18,7 @@
                                              <path d="M9 42H39" stroke="#000" stroke-width="4" stroke-linecap="round" /></svg>
                                      </span>
                                      <h6 class="ivu-typography"><strong>{{ fs_lang('home') }}</strong>
-                                         <!---->
+                                     
                                      </h6>
                                  </div>
                                  <div class="ivu-cell-label"></div>
@@ -42,7 +42,7 @@
                                         <svg width="20" height="20" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23 20L23 6L6 6L6 20L23 20Z" fill="none" stroke="#000" stroke-width="4" stroke-linejoin="round"/><path d="M42 42V28L25 28L25 42H42Z" fill="none" stroke="#000" stroke-width="4" stroke-linejoin="round"/><path d="M31 6V20H42V6H31Z" fill="none" stroke="#000" stroke-width="4" stroke-linejoin="round"/><path d="M6 28L6 42H17V28H6Z" fill="none" stroke="#000" stroke-width="4" stroke-linejoin="round"/></svg>
                                      </span>
                                      <h6 class="ivu-typography"><strong>{{ fs_db_config('menu_portal_name') }}</strong>
-                                         <!---->
+                                     
                                      </h6>
                                  </div>
                                  <div class="ivu-cell-label"></div>
@@ -66,7 +66,7 @@
                                          </svg>
                                      </span>
                                      <h6 class="ivu-typography"><strong>{{ fs_db_config('menu_post_name') }}</strong>
-                                         <!---->
+                                     
                                      </h6>
                                  </div>
                                  <div class="ivu-cell-label"></div>
@@ -90,7 +90,7 @@
                                              <path d="M24 40C32.8366 40 40 32.8366 40 24C40 15.1634 32.8366 8 24 8C15.1634 8 8 15.1634 8 24C8 32.8366 15.1634 40 24 40Z" fill="none" stroke="#000" stroke-width="4" stroke-linejoin="round" />
                                              <path d="M37.5641 15.5098C41.7833 15.878 44.6787 17.1724 45.2504 19.306C46.3939 23.5737 37.8068 29.5827 26.0705 32.7274C14.3343 35.8721 3.89316 34.9617 2.74963 30.694C2.1505 28.458 4.22245 25.744 8.01894 23.2145" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" /></svg> </span>
                                      <h6 class="ivu-typography"><strong>{{ fs_db_config('menu_group_name') }}</strong>
-                                         <!---->
+                                     
                                      </h6>
                                  </div>
                                  <div class="ivu-cell-label"></div>
@@ -105,7 +105,7 @@
                  {{-- User --}}
                  @if (fs_api_config('menu_user_list_status'))
                  <div class="ivu-cell ivu-cell-with-link">
-                     <a target="_self" href="{{ fs_route(route('fresns.user.list')) }}" class="ivu-cell-link {{ fs_route(route('fresns.user.list')) }}">
+                     <a target="_self" href="{{ fs_route(route('fresns.user.list')) }}" class="ivu-cell-link {{ Route::is('fresns.user.list') ? 'ivu-cell-selected' : '' }}">
                          <div class="ivu-cell-item">
                              <div class="ivu-cell-icon"></div>
                              <div class="ivu-cell-main">
@@ -121,7 +121,7 @@
                                          </svg>
                                      </span>
                                      <h6 class="ivu-typography"><strong>{{ fs_db_config('menu_user_list_name') }}</strong>
-                                         <!---->
+                                     
                                      </h6>
                                  </div>
                                  <div class="ivu-cell-label"></div>
@@ -135,7 +135,7 @@
                  {{-- Hashtag --}}
                  @if (fs_api_config('menu_hashtag_list_status'))
                  <div class="ivu-cell ivu-cell-with-link">
-                     <a target="_self" href="{{ fs_route(route('fresns.hashtag.list')) }}" class="ivu-cell-link {{ fs_route(route('fresns.hashtag.list')) }}">
+                     <a target="_self" href="{{ fs_route(route('fresns.hashtag.list')) }}" class="ivu-cell-link {{ Route::is('fresns.hashtag.list') ? 'ivu-cell-selected' : '' }}">
                          <div class="ivu-cell-item">
                              <div class="ivu-cell-icon"></div>
                              <div class="ivu-cell-main">
@@ -146,7 +146,7 @@
                                              <path d="M16 18H32" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" /></svg>
                                      </span>
                                      <h6 class="ivu-typography"><strong> {{ fs_db_config('menu_hashtag_list_name') }}</strong>
-                                         <!---->
+                                     
                                      </h6>
                                  </div>
                                  <div class="ivu-cell-label"></div>
@@ -160,7 +160,7 @@
                  {{-- Comment --}}
                  @if (fs_api_config('menu_comment_list_status'))
                  <div class="ivu-cell ivu-cell-with-link">
-                     <a target="_self" href="{{ fs_route(route('fresns.comment.list')) }}" class="ivu-cell-link {{ fs_route(route('fresns.comment.list')) }}">
+                     <a target="_self" href="{{ fs_route(route('fresns.comment.list')) }}" class="ivu-cell-link {{ Route::is('fresns.comment.list') ? 'ivu-cell-selected' : '' }}">
                          <div class="ivu-cell-item">
                              <div class="ivu-cell-icon"></div>
                              <div class="ivu-cell-main">
@@ -169,7 +169,7 @@
                                         <svg width="20" height="20" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M44 6H4V36H13V41L23 36H44V6Z" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 19.5V22.5" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 19.5V22.5" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M34 19.5V22.5" stroke="#000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
                                      </span>
                                      <h6 class="ivu-typography"><strong> {{ fs_db_config('menu_comment_list_name') }}</strong>
-                                         <!---->
+                                     
                                      </h6>
                                  </div>
                                  <div class="ivu-cell-label"></div>
@@ -182,7 +182,7 @@
                  @endif
                  {{-- User Center --}}
                  <div class="ivu-cell ivu-cell-with-link">
-                     <a target="_self" class="ivu-cell-link {{ Route::is('fresns.account.*') ? 'ivu-cell-selected' : '' }}" href="{{ fs_route(route('fresns.account.index')) }}">
+                     <a target="_self" class="ivu-cell-link {{ Route::is('fresns.account.index') ? 'ivu-cell-selected' : '' }}" href="{{ fs_route(route('fresns.account.index')) }}">
                          <div class="ivu-cell-item">
                              <div class="ivu-cell-icon"></div>
                              <div class="ivu-cell-main">
@@ -191,7 +191,7 @@
                                          </svg>
                                      </span>
                                      <h6 class="ivu-typography"><strong> {{ fs_lang('userMy') }}</strong>
-                                         <!---->
+                                     
                                      </h6>
                                  </div>
                                  <div class="ivu-cell-label"></div>
@@ -213,7 +213,7 @@
                                              <path d="M24 31C27.866 31 31 27.866 31 24C31 20.134 27.866 17 24 17C20.134 17 17 20.134 17 24C17 27.866 20.134 31 24 31Z" fill="none" stroke="#000" stroke-width="4" stroke-linejoin="round" /></svg>
                                      </span>
                                      <h6 class="ivu-typography"><strong>设置</strong>
-                                         <!---->
+                                     
                                      </h6>
                                  </div>
                                  <div class="ivu-cell-label"></div>
@@ -226,7 +226,7 @@
              </div>
              <div class="ivu-ml ivu-mr">
                  <div class="ivu-divider ivu-divider-horizontal ivu-divider-default">
-                     <!---->
+                  
                  </div>
              </div>
              <div class="i-menu-list-link">
