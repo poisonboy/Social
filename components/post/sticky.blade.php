@@ -12,10 +12,10 @@
     @endphp
 @endif
 
-<a href="{{ fs_route(route('fresns.post.detail', ['pid' => $sticky['pid']])) }}" class="list-group-item list-group-item-action text-break px-3 py-2">
+<a href="{{ fs_route(route('fresns.post.detail', ['pid' => $sticky['pid']])) }}" class="list-group-item list-group-item-action text-break px-3 pt-1 mb-2" style="">
     <i class="fa-regular fa-circle-up me-1 text-danger"></i>
     @if ($title)
         <img src="{{ $title['imageUrl'] }}" loading="lazy" alt="{{ $title['name'] }}" style="height: 24px">
     @endif
-    {{ $sticky['title'] ?? Str::limit(strip_tags($sticky['content']), 80) }}
+    {{ $sticky['title'] ?? Str::limit(strip_tags($sticky['content']), 60) }}
 </a>

@@ -2,15 +2,15 @@
     $user = $user ?? $topUser;
 @endphp
 
-<div class="position-relative d-flex fs-hover">
+<div class="position-relative d-flex fs-hover " style="    align-items: center;"> 
     <section class="flex-shrink-0">
             @if ($user['decorate'])
                 <img src="{{ $user['decorate'] }}" loading="lazy" alt="Avatar Decorate" class="user-decorate">
             @endif
             <img src="{{ $user['avatar'] }}" loading="lazy" alt="{{ $user['nickname'] }}" class="user-avatar rounded-circle">
     </section>
-    <div class="text-start ms-2 mt-2">
-        <div class="user-nickname text-nowrap overflow-hidden mt-1" style="color:{{ $user['nicknameColor'] }};">
+    <div class="text-start  ">
+        <div class="user-nickname text-nowrap overflow-hidden mt-1" style="    max-width: 122px;color:{{ $user['nicknameColor'] }};">
             {{ $user['nickname'] }}
             @if ($user['verifiedStatus'])
                 @if ($user['verifiedIcon'])
@@ -32,12 +32,12 @@
         <input type="hidden" name="forgetCache" value=1 />
         <input type="hidden" name="fsid" value="{{ $user['fsid'] }}"/>
         @if ($user['interaction']['followStatus'])
-            <a class="btn btn-success btn-sm rounded-pill fs-mark me-3 px-3" data-interaction-active="{{ $user['interaction']['followStatus'] }}" data-bi="fa-regular fa-circle d-none" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ fs_lang('userUnfollow') }}">
+            <a class="btn btn-success btn-sm rounded-pill fs-mark me-3 px-3 py-0" style=" height: 28px;line-height: 28px; " data-interaction-active="{{ $user['interaction']['followStatus'] }}" data-bi="fa-regular fa-circle d-none" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ fs_lang('userUnfollow') }}">
                 <i class="fa-solid fa-user-check d-none"></i>
                 {{ fs_lang('userFollowing') }}
             </a>
         @else
-            <a class="btn btn-outline-success btn-sm rounded-pill fs-mark me-3 px-3" data-bi="fa-solid fa-user-check" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ $user['interaction']['followName'] }}">
+            <a class="btn btn-outline-success btn-sm rounded-pill fs-mark me-3 px-3 py-0" style=" height: 28px; line-height: 28px; " data-bi="fa-solid fa-user-check" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ $user['interaction']['followName'] }}">
                 <i class="fa-regular fa-circle d-none"></i>
                 {{ $user['interaction']['followName'] }}
             </a>
