@@ -1,4 +1,4 @@
-<article class="d-flex py-3 fs-hover">
+<article class="d-flex ivu-card  i-work-card mb-3   py-3 ">
     @if ($hashtag['cover'])
         <section class="flex-shrink-0">
             <a href="{{ fs_route(route('fresns.hashtag.detail', ['hid' => $hashtag['hid']])) }}"><img src="{{ $hashtag['cover'] }}" loading="lazy" alt="{{ $hashtag['hname'] }}" class="rounded list-cover"></a>

@@ -1,4 +1,4 @@
-<article class="d-flex border-bottom py-3 fs-hover">
+<article class="d-flex ivu-card  i-work-card mb-3   py-3 ">
     @if ($group['cover'])
         <section class="flex-shrink-0">
             <a href="{{ fs_route(route('fresns.group.detail', ['gid' => $group['gid']])) }}"><img src="{{ $group['cover'] }}" loading="lazy" alt="{{ $group['gname'] }}" class="rounded list-cover"></a>
