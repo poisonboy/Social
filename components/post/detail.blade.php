@@ -37,7 +37,7 @@
     @endphp
 @endif
 
-<article class="position-relative ivu-card     i-work-card my-3   pb-2 " id="{{ $post['pid'] }}">
+<article class="position-relative ivu-card      my-3   pb-2 " id="{{ $post['pid'] }}">
     {{-- Post Author --}}
     <section class="content-author order-0">
         @component('components.post.section.author', [

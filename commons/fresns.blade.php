@@ -44,7 +44,7 @@
             <div class="i-layout-content-main-page" style="min-height: 890px;display:flex">
                 @include('commons.leftbar')
 
-                
+
                 @if (Route::is([
                 'fresns.account.*',
                 'fresns.editor.*',
@@ -54,51 +54,52 @@
                 {{-- Main --}}
                 <main class="i-layout-content-main-page-view i-layout-content-main-page-view-desktop">
                     @yield('content')
+                    {{-- Footer --}}
+                    @if (Route::is('fresns.account.index'))
+                    <footer class="ms-25 py-4 text-center text-muted ">
+                        <p class="mb-1">
+                            @if (fs_api_config('account_terms_status'))
+                            <a href="{{ fs_route(route('fresns.custom.page', ['name' => 'policies'])).'#terms-tab' }}" class="link-secondary text-decoration-none">{{ fs_lang('accountPoliciesTerms') }}</a>
+                            @endif
+                            @if (fs_api_config('account_privacy_status'))
+                            <a href="{{ fs_route(route('fresns.custom.page', ['name' => 'policies'])).'#privacy-tab' }}" class="link-secondary text-decoration-none ms-2">{{ fs_lang('accountPoliciesPrivacy') }}</a>
+                            @endif
+                            @if (fs_api_config('account_cookies_status'))
+                            <a href="{{ fs_route(route('fresns.custom.page', ['name' => 'policies'])).'#cookies-tab' }}" class="link-secondary text-decoration-none ms-2">{{ fs_lang('accountPoliciesCookies') }}</a>
+                            @endif
+                        </p>
+
+                        <p class="mb-1">Copyright &copy; {{fs_db_config('site_copyright_years')}} {{fs_db_config('site_copyright')}}. All Rights Reserved</p>
+
+                        @if (fs_db_config('site_china_mode'))
+                        <p class="mb-1" style="font-size:15px;">
+                            @if (fs_db_config('china_icp_filing'))
+                            <a href="https://beian.miit.gov.cn/" target="_blank" rel="nofollow" class="text-decoration-none link-secondary">{{fs_db_config('china_icp_filing')}}</a>
+                            @endif
+                            @if (fs_db_config('china_icp_filing') && fs_db_config('china_psb_filing'))
+                            <span class="mx-1">|</span>
+                            @endif
+                            @if (fs_db_config('china_psb_filing'))
+                            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode={{ Str::of(fs_db_config('china_psb_filing'))->match('/\d+/') }}" target="_blank" rel="nofollow" class="text-decoration-none link-secondary">{{ fs_db_config('china_psb_filing') }}</a>
+                            @endif
+                        </p>
+
+                        @if (fs_db_config('china_icp_license'))
+                        <p class="mb-1" style="font-size:15px;">{{ fs_db_config('china_icp_license') }}</p>
+                        @endif
+
+                        @if (fs_db_config('china_broadcasting_license'))
+                        <p class="mb-1" style="font-size:15px;">{{ fs_db_config('china_broadcasting_license') }}</p>
+                        @endif
+                        @endif
+
+                        <p class="mb-0">Powered by <a href="https://fresns.org" target="_blank" class="text-decoration-none link-secondary">Fresns</a></p>
+
+                    </footer>
+                    @endif
                 </main>
 
-                {{-- Footer --}}
-                @if (Route::is('fresns.account.index'))
-                <footer class="ms-25 py-4 text-center text-muted ">
-                    <p class="mb-1">
-                        @if (fs_api_config('account_terms_status'))
-                        <a href="{{ fs_route(route('fresns.custom.page', ['name' => 'policies'])).'#terms-tab' }}" class="link-secondary text-decoration-none">{{ fs_lang('accountPoliciesTerms') }}</a>
-                        @endif
-                        @if (fs_api_config('account_privacy_status'))
-                        <a href="{{ fs_route(route('fresns.custom.page', ['name' => 'policies'])).'#privacy-tab' }}" class="link-secondary text-decoration-none ms-2">{{ fs_lang('accountPoliciesPrivacy') }}</a>
-                        @endif
-                        @if (fs_api_config('account_cookies_status'))
-                        <a href="{{ fs_route(route('fresns.custom.page', ['name' => 'policies'])).'#cookies-tab' }}" class="link-secondary text-decoration-none ms-2">{{ fs_lang('accountPoliciesCookies') }}</a>
-                        @endif
-                    </p>
 
-                    <p class="mb-1">Copyright &copy; {{fs_db_config('site_copyright_years')}} {{fs_db_config('site_copyright')}}. All Rights Reserved</p>
-
-                    @if (fs_db_config('site_china_mode'))
-                    <p class="mb-1" style="font-size:15px;">
-                        @if (fs_db_config('china_icp_filing'))
-                        <a href="https://beian.miit.gov.cn/" target="_blank" rel="nofollow" class="text-decoration-none link-secondary">{{fs_db_config('china_icp_filing')}}</a>
-                        @endif
-                        @if (fs_db_config('china_icp_filing') && fs_db_config('china_psb_filing'))
-                        <span class="mx-1">|</span>
-                        @endif
-                        @if (fs_db_config('china_psb_filing'))
-                        <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode={{ Str::of(fs_db_config('china_psb_filing'))->match('/\d+/') }}" target="_blank" rel="nofollow" class="text-decoration-none link-secondary">{{ fs_db_config('china_psb_filing') }}</a>
-                        @endif
-                    </p>
-
-                    @if (fs_db_config('china_icp_license'))
-                    <p class="mb-1" style="font-size:15px;">{{ fs_db_config('china_icp_license') }}</p>
-                    @endif
-
-                    @if (fs_db_config('china_broadcasting_license'))
-                    <p class="mb-1" style="font-size:15px;">{{ fs_db_config('china_broadcasting_license') }}</p>
-                    @endif
-                    @endif
-
-                    <p class="mb-0">Powered by <a href="https://fresns.org" target="_blank" class="text-decoration-none link-secondary">Fresns</a></p>
-               
-                </footer>
-                @endif
                 @else
                 {{-- Main --}}
                 <main class="  i-layout-content-main-page-view i-layout-content-main-page-view-desktop">
@@ -273,7 +274,6 @@
                 history.go(-1);
             }
         };
-
     </script>
     <script src="/assets/plugins/{{ $engineFskey }}/js/fresns-iframe.js?v={{ $engineVersion }}"></script>
     <script src="/assets/themes/Social/js/jquery.caret.min.js?v={{ $themeVersion }}"></script>
@@ -281,13 +281,14 @@
     <script src="/assets/themes/Social/js/prism.min.js?v={{ $themeVersion }}"></script>
     <script src="/assets/themes/Social/js/fancybox.umd.min.js?v={{ $themeVersion }}"></script>
     <script src="/assets/themes/Social/js/fresns.js?v={{ $themeVersion }}"></script>
-    <script id="rrbayJs" src="/canyou/js/wza.min.js" referrerpolicy="origin" ></script>
+    <script id="rrbayJs" src="/canyou/js/wza.min.js" referrerpolicy="origin"></script>
     @stack('script')
 </body>
 <script src="//res.zvo.cn/translate/translate.js"></script>
 <script>
-translate.setUseVersion2(); //设置使用v2.x 版本
-translate.language.setLocal('chinese_simplified'); //设置本地语种（当前网页的语种）。如果不设置，默认自动识别当前网页显示文字的语种。 可填写如 'english'、'chinese_simplified' 等，具体参见文档下方关于此的说明。
-translate.execute();//进行翻译 
+    translate.setUseVersion2(); //设置使用v2.x 版本
+    translate.language.setLocal('chinese_simplified'); //设置本地语种（当前网页的语种）。如果不设置，默认自动识别当前网页显示文字的语种。 可填写如 'english'、'chinese_simplified' 等，具体参见文档下方关于此的说明。
+    translate.execute(); //进行翻译 
 </script>
+
 </html>

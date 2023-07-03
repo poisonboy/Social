@@ -5,7 +5,7 @@
 @section('description', $items['description'] ?? $group['description'])
 
 @section('content')
-    <div class="ivu-card  i-work-card shadow-sm py-3 ">
+    <div class="ivu-card   shadow-sm py-3 ">
         @component('components.group.detail', compact('group'))@endcomponent
     </div>
 

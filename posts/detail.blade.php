@@ -40,7 +40,7 @@
         </div>
     @endif
 
-    <div class="clearfix pb-5 ivu-card     i-work-card my-3   pt-2 " id="commentList" name="commentList">
+    <div class="clearfix pb-5 ivu-card      my-3   pt-2 " id="commentList" name="commentList">
         <div class="d-flex justify-content-between px-3 mt-1 border-bottom">
             <h3 class="fs-5 pt-2">
                 {{ fs_db_config('comment_name') }}

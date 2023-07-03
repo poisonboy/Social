@@ -9,16 +9,16 @@
 @endphp
 
 @section('content')
-    <div class="d-lg-flex align-items-lg-start">
-        <div class="nav nav-pills flex-lg-column @desktop w-25 @else border-bottom mb-4 @enddesktop" id="settings-tabs" role="tablist" aria-orientation="vertical">
-            @desktop
+    <div class="d-lg-flex align-items-lg-start  " style="flex-direction: column">
+        <div class="nav nav-pills   " id="settings-tabs" role="tablist" aria-orientation="vertical">
+            {{-- @desktop
                 <div class="d-flex mx-3">
                     <span class="me-2" style="margin-top:11px;">
                         <a class="btn btn-outline-secondary border-0 rounded-circle" href="javascript:goBack()" role="button"><i class="fa-solid fa-arrow-left"></i></a>
                     </span>
                     <h1 class="fs-5 my-3">{{ fs_db_config('menu_account_settings') }}</h1>
                 </div>
-            @enddesktop
+            @enddesktop --}}
 
             <button class="nav-link text-start rounded-0 py-3 px-2 px-lg-3 active" id="profile-tab" data-bs-toggle="pill" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="true">{{ fs_lang('settingGeneral') }}</button>
             <button class="nav-link text-start rounded-0 py-3 px-2 px-lg-3" id="preference-tab" data-bs-toggle="pill" data-bs-target="#preference" type="button" role="tab" aria-controls="preference" aria-selected="false">{{ fs_lang('settingPreference') }}</button>
@@ -40,7 +40,7 @@
             @endif
         </div>
 
-        <div class="tab-content border-start ps-lg-5 pb-5 account-settings px-3" id="settings-tab-content">
+        <div class="tab-content ivu-card      my-3 account-settings p-3" id="settings-tab-content">
             {{-- Profile --}}
             <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
                 <div class="d-none d-lg-block">

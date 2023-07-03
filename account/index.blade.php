@@ -3,7 +3,7 @@
 @section('title', fs_db_config('menu_account'))
 
 @section('content')
-    <div class="bg-body d-flex flex-row">
+    <div class="ivu-card      d-flex flex-row">
         {{-- avatar --}}
         <div class="avatar">
             @if (fs_user('detail.decorate'))
@@ -69,7 +69,7 @@
     </div>
 
     @mobile
-        <div class="list-group rounded-0 my-3">
+        <div class=" p-3 ivu-card      border-none my-3">
             {{-- Conversation --}}
             <a href="{{ fs_route(route('fresns.notifications.index')) }}" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start">
                 <span class="py-2"><i class="fa-regular fa-bell me-2"></i> {{ fs_db_config('menu_notifications') }}</span>
@@ -95,7 +95,7 @@
         </div>
     @endmobile
 
-    <div class="list-group rounded-0 my-3">
+    <div class=" p-3 ivu-card      border-none my-3">
         {{-- Extcredits --}}
         @if (fs_user('detail.stats.extcredits1State') != 1 ||
             fs_user('detail.stats.extcredits2State') != 1 ||
@@ -174,7 +174,7 @@
         </a>
     </div>
 
-    <div class="list-group rounded-0 my-3">
+    <div class=" p-3 ivu-card      border-none my-3">
         {{-- Settings --}}
         <a href="{{ fs_route(route('fresns.account.settings')) }}" class="list-group-item list-group-item-action d-flex justify-content-between align-items-start">
             <span class="py-2"><i class="fa-solid fa-gear me-2"></i> {{ fs_db_config('menu_account_settings') }}</span>

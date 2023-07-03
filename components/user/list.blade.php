@@ -1,4 +1,4 @@
-<article class="d-flex ivu-card  i-work-card mb-3   py-3 ">
+<article class="d-flex ivu-card   mb-3   py-3 ">
     {{-- Avatar --}}
     <section class="flex-shrink-0">
         <a href="{{ fs_route(route('fresns.profile.index', ['uidOrUsername' => $user['fsid']])) }}">

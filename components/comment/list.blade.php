@@ -40,7 +40,7 @@
     @endphp
 @endif
 
-<article class="position-relative ivu-card  i-work-card mb-3   py-3 " id="{{ $comment['cid'] }}">
+<article class="position-relative ivu-card   mb-3   py-3 " id="{{ $comment['cid'] }}">
     {{-- Comment Author --}}
     <section class="content-author order-0">
         @component('components.comment.section.author', [
