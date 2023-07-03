@@ -7,7 +7,7 @@
     @include('posts.tabs')
 
     {{-- Location --}}
-    <div class="alert alert-warning mx-3" role="alert" id="currentLocation">
+    <div class="alert alert-warning my-3" role="alert" id="currentLocation">
         <button class="btn btn-primary" type="button" disabled>
             <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
             {{ fs_lang('locationLoading') }}
@@ -15,7 +15,7 @@
     </div>
 
     {{-- Post List --}}
-    <div class="clearfix border-top" id="fresns-list-container">
+    <div class="clearfix  " id="fresns-list-container">
         @foreach($posts as $post)
             @component('components.post.list', compact('post'))@endcomponent
         @endforeach

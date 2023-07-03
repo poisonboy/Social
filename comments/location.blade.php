@@ -22,7 +22,7 @@
     </div>
 
     {{-- Comment List --}}
-    <div class="clearfix border-top" id="fresns-list-container">
+    <div class="clearfix " id="fresns-list-container">
         @foreach($comments as $comment)
             @component('components.comment.list', [
                 'comment' => $comment,

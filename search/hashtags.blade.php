@@ -16,7 +16,7 @@
     </div>
 
     {{-- Search Results --}}
-    <div class="clearfix border-top">
+    <div class="clearfix ">
         @foreach($hashtags as $hashtag)
             @component('components.hashtag.list', compact('hashtag'))@endcomponent
         @endforeach

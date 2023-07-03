@@ -9,10 +9,10 @@
     @include('posts.tabs')
 
     {{-- Post List --}}
-    <div class="clearfix border-top" @if (fs_db_config('menu_post_query_state') != 1) id="fresns-list-container" @endif>
+    <div class="clearfix  " @if (fs_db_config('menu_post_query_state') != 1) id="fresns-list-container" @endif>
         @foreach($posts as $post)
             @component('components.post.list', compact('post'))@endcomponent
-        @endforeach
+        @endforeach                
     </div>
 
     {{-- Pagination --}}

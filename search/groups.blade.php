@@ -16,7 +16,7 @@
     </div>
 
     {{-- Search Results --}}
-    <div class="clearfix border-top">
+    <div class="clearfix ">
         @foreach($groups as $group)
             @component('components.group.list', compact('group'))@endcomponent
         @endforeach

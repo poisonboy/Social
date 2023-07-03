@@ -132,7 +132,7 @@
 
                         {{-- Password --}}
                         <div class="form-floating">
-                            <input type="password" name="password" class="form-control border-top-0" value="{{ old('password') }}" placeholder="Password" required>
+                            <input type="password" name="password" class="form-control " value="{{ old('password') }}" placeholder="Password" required>
                             <label for="password">{{ fs_lang('password') }}</label>
                         </div>
 

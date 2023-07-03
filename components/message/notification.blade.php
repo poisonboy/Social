@@ -201,7 +201,7 @@
                             <div class="flex-grow-1 text-wrap text-break">{{ $notification['actionInfo']['title'] ?? Str::limit(strip_tags($notification['actionInfo']['content']), 80) }}</div>
                         </div>
                         @if ($notification['actionInfo']['group'])
-                            <div class="comment-post-group border-top text-secondary">{{ $notification['actionInfo']['group']['gname'] }}</div>
+                            <div class="comment-post-group  text-secondary">{{ $notification['actionInfo']['group']['gname'] }}</div>
                         @endif
                         <a href="{{ fs_route(route('fresns.post.detail', ['pid' => $notification['actionInfo']['pid']])) }}" class="text-decoration-none stretched-link"></a>
                     </section>

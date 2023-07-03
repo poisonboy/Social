@@ -16,7 +16,7 @@
     </div>
 
     {{-- Search Results --}}
-    <div class="clearfix border-top">
+    <div class="clearfix ">
         @foreach($users as $user)
             @component('components.user.list', compact('user'))@endcomponent
         @endforeach

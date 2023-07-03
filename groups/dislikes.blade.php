@@ -7,7 +7,7 @@
     @include('account.tabs-dislikes')
 
     {{-- Group List --}}
-    <div class="clearfix border-top" id="fresns-list-container">
+    <div class="clearfix " id="fresns-list-container">
         @foreach($groups as $group)
             @component('components.group.list', compact('group'))@endcomponent
         @endforeach

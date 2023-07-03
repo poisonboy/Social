@@ -26,7 +26,7 @@
 
 {{-- Sticky Posts --}}
 @if (fs_sticky_posts())
-    <aside class="fs-list-group rounded mb-3">
+    <aside class="ivu-card   mb-3 pb-2">
         <h4 class="fs-5 px-3 pb-1 pt-3">{{ fs_lang('contentSticky') }}</h4>
         @foreach(fs_sticky_posts() as $sticky)
             @component('components.post.sticky', compact('sticky'))@endcomponent
@@ -35,7 +35,7 @@
 @endif
 
 {{-- Digest Posts --}}
-<aside class="fs-list-group rounded mb-3">
+<aside class="ivu-card   mb-3 pb-2">
     <h4 class="fs-5 px-3 pb-1 pt-3">{{ fs_lang('contentHotList') }}</h4>
     @foreach(fs_list('posts') as $topPost)
         <a href="{{ fs_route(route('fresns.post.detail', ['pid' => $topPost['pid']])) }}" class="list-group-item list-group-item-action text-break px-3 py-2">
@@ -46,7 +46,7 @@
 </aside>
 
 {{-- Recommend Users --}}
-<aside class="fs-list-group rounded mb-3">
+<aside class="ivu-card   mb-3 pb-2">
     <h4 class="fs-5 px-3 pb-1 pt-3">{{ fs_lang('contentRecommend') }}</h4>
     @foreach(fs_index_list('users') as $topUser)
         @component('components.user.sidebar-list', compact('topUser'))@endcomponent

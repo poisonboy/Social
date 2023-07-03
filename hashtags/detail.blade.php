@@ -13,7 +13,7 @@
     @switch($type)
         {{-- Post List --}}
         @case('posts')
-            <div class="clearfix border-top" id="fresns-list-container">
+            <div class="clearfix " id="fresns-list-container">
                 @foreach($posts as $post)
                     @component('components.post.list', compact('post'))@endcomponent
                 @endforeach
@@ -35,7 +35,7 @@
 
         {{-- Comment List --}}
         @case('comments')
-            <div class="clearfix border-top" id="fresns-list-container">
+            <div class="clearfix " id="fresns-list-container">
                 @foreach($comments as $comment)
                     @component('components.comment.list', [
                         'comment' => $comment,

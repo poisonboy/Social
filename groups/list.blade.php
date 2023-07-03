@@ -15,7 +15,7 @@
     </div>
 
     {{-- Group List --}}
-    <div class="clearfix border-top" @if (fs_db_config('menu_group_list_query_state') != 1) id="fresns-list-container" @endif>
+    <div class="clearfix " @if (fs_db_config('menu_group_list_query_state') != 1) id="fresns-list-container" @endif>
         @foreach($groups ?? [] as $group)
             @component('components.group.list', compact('group'))@endcomponent
         @endforeach

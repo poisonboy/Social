@@ -15,7 +15,7 @@
     </div>
 
     {{-- Comment List --}}
-    <div class="clearfix border-top" @if (fs_db_config('menu_comment_query_state') != 1) id="fresns-list-container" @endif>
+    <div class="clearfix " @if (fs_db_config('menu_comment_query_state') != 1) id="fresns-list-container" @endif>
         @foreach($comments as $comment)
             @component('components.comment.list', [
                 'comment' => $comment,

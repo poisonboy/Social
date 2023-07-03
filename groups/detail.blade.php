@@ -44,7 +44,7 @@
     @endif
 
     {{-- Post List --}}
-    <div class="clearfix border-top">
+    <div class="clearfix ">
         {{-- Can View Content --}}
         @if ($group['canViewContent'])
             {{-- List --}}

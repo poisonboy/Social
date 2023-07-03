@@ -22,7 +22,7 @@
     </div>
 
     {{-- Post List --}}
-    <div class="clearfix border-top" id="fresns-list-container">
+    <div class="clearfix " id="fresns-list-container">
         @foreach($posts as $post)
             @component('components.post.list', compact('post'))@endcomponent
         @endforeach

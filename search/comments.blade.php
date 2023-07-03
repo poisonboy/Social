@@ -16,7 +16,7 @@
     </div>
 
     {{-- Search Results --}}
-    <div class="clearfix border-top">
+    <div class="clearfix ">
         @foreach($comments as $comment)
             @component('components.comment.list', compact('comment'))@endcomponent
         @endforeach

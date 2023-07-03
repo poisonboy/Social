@@ -15,7 +15,7 @@
     </div>
 
     {{-- Hashtag List --}}
-    <div class="clearfix border-top" @if (fs_db_config('menu_hashtag_query_state') != 1) id="fresns-list-container" @endif>
+    <div class="clearfix " @if (fs_db_config('menu_hashtag_query_state') != 1) id="fresns-list-container" @endif>
         @foreach($hashtags as $hashtag)
             @component('components.hashtag.list', compact('hashtag'))@endcomponent
         @endforeach

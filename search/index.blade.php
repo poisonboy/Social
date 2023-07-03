@@ -13,7 +13,7 @@
     </div>
 
     {{-- Search Results --}}
-    <div class="clearfix border-top">
+    <div class="clearfix ">
     </div>
 
     {{-- Pagination --}}

@@ -2,8 +2,8 @@
     <div class="i-layout-header-content i-layout-header-content-desktop">
         <div class="i-layout-header-content-main">
             <a target="_self" class="i-link i-link-color i-layout-header-logo i-layout-header-logo-stick" href="{{ fs_route(route('fresns.home')) }}">
-                <img src="{{ fs_db_config('site_icon') }}" alt="{{ fs_db_config('site_name') }}" class="d-none d-sm-block" width="40" height="40">
-                <img src="{{ fs_db_config('site_logo') }}" alt="{{ fs_db_config('site_name') }}" class="d-block d-sm-none" width="40" height="40">
+                <img src="{{ fs_db_config('site_icon') }}" alt="{{ fs_db_config('site_name') }}" class="d-none d-sm-block" width="50" height="50">
+                <img src="{{ fs_db_config('site_logo') }}" alt="{{ fs_db_config('site_name') }}" class="d-block d-sm-none" height="30">
             </a>
             <div class="i-layout-header-search" >
                 <div style="    border-radius: 6px;    overflow: hidden;" class="ivu-input-wrapper ivu-input-wrapper-large ivu-input-type-text ivu-input-group ivu-input-group-large ivu-input-group-with-append ivu-input-hide-icon i-layout-header-search-input">

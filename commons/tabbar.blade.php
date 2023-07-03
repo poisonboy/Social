@@ -11,7 +11,7 @@
     'fresns.account.reset.password',
 ]) || request()->url() == fs_route(route('fresns.custom.page', ['name' => 'channels'])))
     <div class="clearfix py-5 d-lg-none"></div>
-    <div class="fs-tabbar fixed-bottom bg-light border-top d-lg-none">
+    <div class="fs-tabbar fixed-bottom bg-light  d-lg-none">
         <div class="row mx-1">
             {{-- home --}}
             <div class="col text-center">

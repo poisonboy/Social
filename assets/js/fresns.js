@@ -75,14 +75,14 @@ window.tips = function (message, code = 200) {
 
     if (code == 36104) {
         apiMessage = `${message}
-            <div class="mt-2 pt-2 border-top">
+            <div class="mt-2 pt-2 ">
                 <a class="btn btn-primary btn-sm" href="${langTag}/account/settings#account-tab" role="button">
                     ${fs_lang('settingAccount')}
                 </a>
             </div>`;
     } else if (code == 38200) {
         apiMessage = `${message}
-            <div class="mt-2 pt-2 border-top">
+            <div class="mt-2 pt-2 ">
                 <a class="btn btn-primary btn-sm" href="${langTag}/editor/drafts/posts" role="button">
                     ${fs_lang('view')}
                 </a>

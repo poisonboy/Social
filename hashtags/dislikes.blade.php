@@ -7,7 +7,7 @@
     @include('account.tabs-dislikes')
 
     {{-- Hashtag List --}}
-    <div class="clearfix border-top" id="fresns-list-container">
+    <div class="clearfix " id="fresns-list-container">
         @foreach($hashtags as $hashtag)
             @component('components.hashtag.list', compact('hashtag'))@endcomponent
         @endforeach
