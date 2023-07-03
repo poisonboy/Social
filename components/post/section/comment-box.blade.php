@@ -1,4 +1,4 @@
-<div class="border-bottom p-3">
+<div class="ivu-card     i-work-card my-3   p-3 ">
     <label class="form-label">{{ fs_db_config('publish_comment_name') }} {{ $nickname }}</label>
 
     @if (fs_user()->check())

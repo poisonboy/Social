@@ -1,4 +1,4 @@
- <div class="i-layout-content-main-page-menu">
+ <div class="i-layout-content-main-page-menu d-none d-sm-block">
      <div class="ivu-card   ivu-card-dis-hover i-menu-list i-menu-list-card">
      
      

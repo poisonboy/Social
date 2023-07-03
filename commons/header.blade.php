@@ -2,7 +2,8 @@
     <div class="i-layout-header-content i-layout-header-content-desktop">
         <div class="i-layout-header-content-main">
             <a target="_self" class="i-link i-link-color i-layout-header-logo i-layout-header-logo-stick" href="{{ fs_route(route('fresns.home')) }}">
-                <img src="{{ fs_db_config('site_logo') }}" alt="{{ fs_db_config('site_name') }}" height="36">
+                <img class="d-none d-sm-block" src="{{ fs_db_config('site_logo') }}" alt="{{ fs_db_config('site_name') }}" height="36">
+                <img class="d-sm-none d-block" src="{{ fs_db_config('site_icon') }}" alt="{{ fs_db_config('site_name') }}" height="36">
             </a>
             <div class="i-layout-header-search">
                 <div style="    border-radius: 6px;    overflow: hidden;" class="ivu-input-wrapper ivu-input-wrapper-large ivu-input-type-text ivu-input-group ivu-input-group-large ivu-input-group-with-append ivu-input-hide-icon i-layout-header-search-input">
@@ -29,7 +30,7 @@
                         });
                     </script>
                     @endif
-                    <div class="ivu-input-group-append" style="">
+                    <div class="ivu-input-group-append d-none d-sm-table-cell" style="">
                         <div><span class="ivu-typography"><kbd>⌘</kbd></span>
                             <span class="ivu-typography"><kbd>k</kbd></span>
                         </div>
@@ -40,7 +41,7 @@
             <div class="i-layout-header-right">
 
             {{-- Language --}}
-                <span class="i-layout-header-trigger i-layout-header-trigger-min i-layout-header-trigger-in">
+                <span class="i-layout-header-trigger i-layout-header-trigger-min i-layout-header-trigger-in d-none d-sm-inline-block">
                     <a class="ivu-notifications i-layout-header-notice i-layout-header-notice-not-mobile " href="{{ fs_route(route('fresns.messages.index')) }}">
                         <div class="ivu-dropdown">
                             <div class="ivu-dropdown-rel">
@@ -109,7 +110,7 @@
                 </span>
                 @endif
                 {{-- Notifications --}}
-                <span class="i-layout-header-trigger i-layout-header-trigger-min i-layout-header-trigger-in">
+                <span class="i-layout-header-trigger i-layout-header-trigger-min i-layout-header-trigger-in d-none d-sm-inline-block">
                     <a class="ivu-notifications i-layout-header-notice i-layout-header-notice-not-mobile  " href="{{ fs_route(route('fresns.notifications.index')) }}">
                         <div class="ivu-dropdown">
                             <div class="ivu-dropdown-rel">
@@ -135,7 +136,7 @@
                     </a>
                 </span>
                 {{-- Aria --}}
-                <span class="i-layout-header-trigger i-layout-header-trigger-min i-layout-header-trigger-in">
+                <span class="i-layout-header-trigger i-layout-header-trigger-min i-layout-header-trigger-in d-none d-sm-inline-block">
                     <div class="ivu-notifications i-layout-header-notice i-layout-header-notice-not-mobile "  >
                         <div class="ivu-dropdown">
                             <div class="ivu-dropdown-rel">
@@ -160,7 +161,7 @@
                 </span>
 
                 {{-- Account --}}
-                <div class="i-layout-header-trigger i-layout-header-trigger-min i-layout-header-trigger-in" style="padding-left:12px ;">
+                <div class="i-layout-header-trigger i-layout-header-trigger-min i-layout-header-trigger-in d-none d-sm-inline-block" style="padding-left:12px ;">
                     @if (fs_user()->check())
                     <button type="button" class="btn   d-flex py-2" data-bs-toggle="dropdown" aria-expanded="false">
                         <a class="nav-avatar ms-1  {{ Route::is('fresns.account.*') ? 'active' : '' }}" href="{{ fs_route(route('fresns.account.index')) }}"><img src="{{ fs_user('detail.avatar') }}" class="rounded-circle"></a>

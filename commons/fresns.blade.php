@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="/assets/themes/Social/css/fancybox.min.css?v={{ $themeVersion }}">
     <link rel="stylesheet" href="/assets/themes/Social/css/fresns.css?v={{ $themeVersion }}">
     <link rel="stylesheet" href="/assets/themes/Social/css/social.css?v={{ $themeVersion }}">
+    <link rel="stylesheet" href="/assets/themes/Social/css/res.css?v={{ $themeVersion }}">
     <script src="/static/js/jquery.min.js"></script>
     @stack('style')
     @if (fs_db_config('website_stat_position') == 'head')
@@ -42,6 +43,8 @@
         <div class="i-layout-content-main">
             <div class="i-layout-content-main-page" style="min-height: 890px;display:flex">
                 @include('commons.leftbar')
+
+                
                 @if (Route::is([
                 'fresns.account.*',
                 'fresns.editor.*',

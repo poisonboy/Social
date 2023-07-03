@@ -1,0 +1,38 @@
+.ivu-card textarea.form-control{
+    background: #f7f7fa;
+}
+
+
+
+
+/* 低于1440px屏幕下样式 */
+@media (max-width: 1199.98px) {}
+
+/*  移动端样式 */
+@media (max-width:575.98px) {
+    .i-layout-header-content-desktop {
+        margin: 0 6px;
+    }
+
+    .i-layout-content-fix-with-header {
+        margin: 68px 0 0;
+
+    }
+
+    .i-layout-content-main-page-view-desktop {
+        margin: 0;
+        width: 100%;
+    }
+
+    .wza-Tool {
+        display: none;
+    }
+    
+  
+   
+}
+@media (min-width: 576px) {
+    .d-sm-table-cell {
+        display: table-cell!important;
+    }
+}

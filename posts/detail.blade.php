@@ -5,12 +5,12 @@
 @section('description', $items['description'] ?? Str::limit(strip_tags($post['content']), 140))
 
 @section('content')
-    @desktop
+    <!-- @desktop
         <div class="d-flex mx-3 my-2">
             <a class="btn btn-outline-secondary border-0 rounded-circle" href="javascript:goBack()" role="button"><i class="fa-solid fa-arrow-left"></i></a>
             <h4 class="fs-5 mb-0 ms-2" style="padding-top: 0.38rem">{{ fs_db_config('post_name') }}</h4>
         </div>
-    @enddesktop
+    @enddesktop -->
 
     <div class="bg-light shadow-sm">
         @component('components.post.detail', compact('post'))@endcomponent
@@ -40,8 +40,8 @@
         </div>
     @endif
 
-    <div class="clearfix pb-5" id="commentList" name="commentList">
-        <div class="d-flex justify-content-between px-3 mt-5 border-bottom">
+    <div class="clearfix pb-5 ivu-card     i-work-card my-3   pt-2 " id="commentList" name="commentList">
+        <div class="d-flex justify-content-between px-3 mt-1 border-bottom">
             <h3 class="fs-5 pt-2">
                 {{ fs_db_config('comment_name') }}
                 <span class="badge bg-secondary rounded-pill">{{ $post['commentCount'] }}</span>

@@ -28633,10 +28633,11 @@ a.i-universal-button-border-bold {
 }
 
 .i-layout-header-logo {
-    display: inline-block;
+    display: flex;
     height: 56px;
     line-height: 56px;
-    padding: 0 16px
+    padding: 0 16px;
+    align-items: center;
 }
 
 .i-layout-header-logo-stick {
