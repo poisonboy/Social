@@ -7,6 +7,6 @@ Social  在 [Fresns](https://fresns.org) 官方主题模板 [Moments](https://gi
 
 模板演示：https://f.xcxgy.cn
 
-Fresns 官网:https://fresns.org
+Fresns 官网：https://fresns.org
 
-Moments 模板: https://github.com/fresns/themes/tree/master/Moments
+Moments 模板：https://github.com/fresns/themes/tree/master/Moments
