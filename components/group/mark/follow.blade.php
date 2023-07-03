@@ -12,7 +12,7 @@
                 @endif
             </a>
         @else
-            <a class="btn btn-outline-success btn-sm fs-mark" data-bi="fa-solid fa-flag" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ $interaction['followName'] }}">
+            <a class="btn btn-outline-success btn-sm fs-mark border-none" data-bi="fa-solid fa-flag" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ $interaction['followName'] }}">
                 <i class="fa-regular fa-flag"></i>
                 @if (fs_api_config('group_follower_count') && $count)
                     <span class="show-count">{{ $count }}</span>

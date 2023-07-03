@@ -11,7 +11,7 @@
             @endif
         </a>
     @else
-        <a class="btn btn-outline-success btn-sm" id="fs-mark-block-{{ $hid }}" data-bs-toggle="collapse" href="#collapse-{{ $hid }}" aria-expanded="false" aria-controls="collapse-{{ $hid }}">
+        <a class="  " id="fs-mark-block-{{ $hid }}" data-bs-toggle="collapse" href="#collapse-{{ $hid }}" aria-expanded="false" aria-controls="collapse-{{ $hid }}">
             <i class="fa-regular fa-circle-xmark"></i>
             @if (fs_api_config('hashtag_blocker_count') && $count)
                 <span class="show-count">{{ $count }}</span>

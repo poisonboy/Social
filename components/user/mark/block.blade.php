@@ -11,7 +11,7 @@
             @endif
         </a>
     @else
-        <a class="btn btn-outline-success btn-sm" id="fs-mark-block-{{ $uid }}" data-bs-toggle="collapse" href="#collapse-{{ $uid }}" aria-expanded="false" aria-controls="collapse-{{ $uid }}">
+        <a class=" " id="fs-mark-block-{{ $uid }}" data-bs-toggle="collapse" href="#collapse-{{ $uid }}" aria-expanded="false" aria-controls="collapse-{{ $uid }}">
             <i class="fa-regular fa-circle-xmark"></i>
             @if (fs_api_config('user_blocker_count') && $count)
                 <span class="show-count">{{ $count }}</span>

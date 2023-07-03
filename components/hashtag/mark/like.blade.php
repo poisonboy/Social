@@ -11,7 +11,7 @@
             @endif
         </a>
     @else
-        <a class="btn btn-outline-success btn-sm fs-mark" data-bi="fa-solid fa-thumbs-up" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ $interaction['likeName'] }}">
+        <a class="btn btn-outline-success btn-sm fs-mark border-none" data-bi="fa-solid fa-thumbs-up" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ $interaction['likeName'] }}">
             <i class="fa-regular fa-thumbs-up"></i>
             @if (fs_api_config('hashtag_liker_count') && $count)
                 <span class="show-count">{{ $count }}</span>

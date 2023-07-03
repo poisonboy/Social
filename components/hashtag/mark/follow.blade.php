@@ -11,7 +11,7 @@
             @endif
         </a>
     @else
-        <a class="btn btn-outline-success btn-sm fs-mark" data-bi="fa-solid fa-star" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ $interaction['followName'] }}">
+        <a class="btn btn-outline-success btn-sm fs-mark border-none" data-bi="fa-solid fa-star" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ $interaction['followName'] }}">
             <i class="fa-regular fa-star"></i>
             @if (fs_api_config('hashtag_follower_count') && $count)
                 <span class="show-count">{{ $count }}</span>

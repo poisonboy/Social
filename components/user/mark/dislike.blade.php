@@ -11,7 +11,7 @@
             @endif
         </a>
     @else
-        <a class="btn btn-outline-success btn-sm fs-mark" data-bi="fa-solid fa-thumbs-down" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ $interaction['dislikeName'] }}">
+        <a class="btn btn-outline-success btn-sm fs-mark border-none" data-bi="fa-solid fa-thumbs-down" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ $interaction['dislikeName'] }}">
             <i class="fa-regular fa-thumbs-down"></i>
             @if (fs_api_config('user_disliker_count') && $count)
                 <span class="show-count">{{ $count }}</span>
