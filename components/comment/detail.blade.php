@@ -222,7 +222,7 @@
 @endif
 
 {{-- Comment Bar --}}
-<div class="fs-tabbar fixed-bottom bg-light  d-sm-none">
+<div class="fs-tabbar fixed-bottom bg-white pb-2    d-sm-none">
     <div class="d-grid gap-2 mx-4 py-2">
         <button class="btn btn-outline-secondary rounded-pill text-start ps-3" type="button" data-bs-toggle="modal" @if (fs_user()->check()) data-bs-target="#commentModal-{{ $comment['cid'] }}" @else data-bs-target="#commentTipModal" @endif>
             {{ fs_db_config('publish_comment_name') }}
